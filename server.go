@@ -10,6 +10,7 @@ func main() {
 	http.HandleFunc("/hello-world", handleHelloWorld)
 	http.HandleFunc("/health", handleHealth)
 	http.HandleFunc("/new-endpoint", handleNewEndpoint)
+	fmt.Println("Added print statement")
 	log.Println("Listening and Serving")
 	err := http.ListenAndServe("localhost:8000", nil)
 	if err != nil {
